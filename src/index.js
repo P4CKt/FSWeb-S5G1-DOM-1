@@ -43,3 +43,57 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+const hName =document.querySelectorAll("a");
+hName[0].textContent = siteContent.nav["nav-item-1"];
+hName[1].textContent = siteContent.nav["nav-item-2"];
+hName[2].textContent = siteContent.nav["nav-item-3"];
+hName[3].textContent = siteContent.nav["nav-item-4"];
+hName[4].textContent = siteContent.nav["nav-item-5"];
+hName[5].textContent = siteContent.nav["nav-item-6"];
+
+//testten geçmiyor ama bence müq
+// for (item of hName) {
+//   item.setAttribute("class","italic");} 
+
+hName.forEach(element => {
+  element.setAttribute("class","italic")
+});
+
+// bu da bi çözüm
+// for (let index=0;index<hName.length;index++) {
+//   hName[index].classList.add("italic");
+//   } 
+
+document.querySelector("#logo-img").setAttribute("src",siteContent["images"]["logo-img"]);
+document.querySelector("#cta-img").setAttribute("src",siteContent["images"]["cta-img"]);
+document.querySelector("#middle-img").setAttribute("src",siteContent["images"]["accent-img"]);
+
+
+document.querySelector("h1").textContent= siteContent.cta.h1;
+document.querySelector("button").textContent= siteContent.cta.button;
+const textCo =document.querySelectorAll(".text-content h4");
+const textIn= document.querySelectorAll(".text-content p");
+//h4'ler
+textCo[0].textContent=siteContent["ana-içerik"]["özellikler-h4"];
+textCo[1].textContent=siteContent["ana-içerik"]["hakkımızda-h4"];
+textCo[2].textContent=siteContent["ana-içerik"]["servisler-h4"];
+textCo[3].textContent=siteContent["ana-içerik"]["ürünler-h4"];
+textCo[4].textContent=siteContent["ana-içerik"]["vizyon-h4"];
+
+
+//p'ler
+textIn[0].textContent=siteContent["ana-içerik"]["özellikler-içerik"];
+textIn[1].textContent=siteContent["ana-içerik"]["hakkımızda-içerik"];
+textIn[2].textContent=siteContent["ana-içerik"]["servisler-içeriği"];
+textIn[3].textContent=siteContent["ana-içerik"]["ürünler-içeriği"];
+textIn[4].textContent=siteContent["ana-içerik"]["vizyon-içeriği"];
+
+document.querySelector(".contact h4").textContent= siteContent["iletisim"]["iletişim-h4"];
+const contactInfo=document.querySelectorAll(".contact p");
+contactInfo[0].textContent=siteContent["iletisim"]["adres"];
+contactInfo[1].textContent=siteContent["iletisim"]["telefon"];
+contactInfo[2].textContent=siteContent["iletisim"]["email"];
+document.querySelector("footer a").setAttribute("class","bold");
+document.querySelector("footer a").textContent=siteContent["footer"]["copyright"];
+
+
